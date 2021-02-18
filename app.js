@@ -10,6 +10,8 @@ app.get("/", function(req,res){
         // "data" keyword found from nodejs built in https require doc
         response.on("data", function(data){
             console.log(data);
+            const weatherData = JSON.parse(data)
+            console.log(weatherData)
         })
     })
     res.send("Server is Up and running")
